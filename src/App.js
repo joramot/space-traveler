@@ -1,12 +1,9 @@
 import './App.css';
-import logoSpace from './assets/planet.png';
+import RouterNav from './components/Router';
 
 function App() {
   return (
-    <div className="App">
-      <img src={logoSpace} alt="logoSpace" />
-      <h1>Space Traveler Hub</h1>
-    </div>
+    <RouterNav />
   );
 }
 
