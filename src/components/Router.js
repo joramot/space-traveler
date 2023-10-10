@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import Rockets from './Rockets';
 import Missions from './Missions';
 import MyProfile from './MyProfile';
-import ErrorPage from './ErrorPage';
+import Errorpage from './Errorpage';
 
 function RouterNav() {
   return (
@@ -15,7 +15,7 @@ function RouterNav() {
           <Route exact path="/" element={<Rockets />} />
           <Route exact path="missions" element={<Missions />} />
           <Route path="myProfile" element={<MyProfile />} />
-          <Route path="*" element={<ErrorPage />} />
+          <Route path="*" element={<Errorpage />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -1,7 +1,7 @@
-function ErrorPage() {
+function Errorpage() {
   return (
     <div />
   );
 }
 
-export default ErrorPage;
+export default Errorpage;
