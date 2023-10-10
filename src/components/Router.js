@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import Rockets from './Rockets';
 import Missions from './Missions';
 import MyProfile from './MyProfile';
-import Errorpage from './Errorpage';
+import Errorpage from './ErrorPage';
 
 function RouterNav() {
   return (
