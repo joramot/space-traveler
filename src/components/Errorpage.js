@@ -1,14 +1,7 @@
-import styles from '../styles/Error.module.css';
-
-function ErrorPage() {
+function Errorpage() {
   return (
-    <div className={styles.error}>
-      <h2 className={styles.h2}>Ups...Something went wrong!</h2>
-      <p className={styles.p}>
-        404 not found
-      </p>
-    </div>
+    <div />
   );
 }
 
-export default ErrorPage;
+export default Errorpage;
