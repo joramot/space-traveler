@@ -1,12 +1,12 @@
 header {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row;
   width: 100%;
 }
 
 div {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row;
   align-items: center;
 }
 
