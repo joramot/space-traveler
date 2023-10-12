@@ -14,43 +14,48 @@ tr:nth-child(even) {
   background-color: rgb(242, 242, 242);
 }
 
+td {
+  border-left: 1px solid gray;
+}
+
 .missions {
   width: 160px;
   height: 30px;
   margin: 0;
   font-size: 20px;
+  margin-left: 10px;
 }
 
 .description {
   width: 750px;
   height: 30px;
-  border-left: 1px solid gray;
   margin: 0;
   font-size: 20px;
+  margin-left: 10px;
 }
 
 .status {
-  width: 130px;
+  width: 120px;
   height: 30px;
-  border-left: 1px solid gray;
   margin: 0;
   font-size: 20px;
+  margin-left: 10px;
 }
 
 .description_p {
   width: 750px;
-  border-left: 1px solid gray;
   margin: 0;
   font-size: 20px;
   font-weight: normal;
+  margin-left: 10px;
 }
 
 .members {
   width: 130px;
-  border-left: 1px solid gray;
   margin: 0;
   font-size: 20px;
   justify-content: center;
+  height: 100%;
 }
 
 .labelmembers {
