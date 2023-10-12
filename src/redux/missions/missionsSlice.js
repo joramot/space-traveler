@@ -4,6 +4,7 @@ const initialState = {
   missions: [],
   isLoading: false,
   error: '',
+  isLoaded: false,
 };
 
 export const fetchMissions = createAsyncThunk(
@@ -32,6 +33,7 @@ const missionsSlice = createSlice({
       .addCase(fetchMissions.fulfilled, (state, action) => ({
         ...state,
         isLoading: false,
+        isLoaded: true,
         missions: action.payload,
       }))
       .addCase(fetchMissions.rejected, (state, action) => ({
