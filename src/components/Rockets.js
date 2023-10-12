@@ -5,13 +5,15 @@ import styles from '../styles/Navbar.module.css';
 
 function Rockets() {
   const {
-    rockets, isLoading, error,
+    rockets, isLoading, error, isLoaded,
   } = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchRockets());
-  }, [dispatch]);
+    if (!isLoaded) {
+      dispatch(fetchRockets());
+    }
+  }, [dispatch, isLoaded]);
 
   return (
     <ul className={styles.rocketsMain}>
