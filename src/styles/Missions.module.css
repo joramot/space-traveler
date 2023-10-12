@@ -1,0 +1,72 @@
+table {
+  display: flex;
+  flex-direction: column;
+}
+
+tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border: 1px solid gray;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(242, 242, 242);
+}
+
+.missions {
+  width: 160px;
+  height: 30px;
+  margin: 0;
+  font-size: 20px;
+}
+
+.description {
+  width: 750px;
+  height: 30px;
+  border-left: 1px solid gray;
+  margin: 0;
+  font-size: 20px;
+}
+
+.status {
+  width: 130px;
+  height: 30px;
+  border-left: 1px solid gray;
+  margin: 0;
+  font-size: 20px;
+}
+
+.description_p {
+  width: 750px;
+  border-left: 1px solid gray;
+  margin: 0;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.members {
+  width: 130px;
+  border-left: 1px solid gray;
+  margin: 0;
+  font-size: 20px;
+  justify-content: center;
+}
+
+.labelmembers {
+  background-color: rgb(109, 117, 125);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.joinmission {
+  background-color: transparent;
+  border: 1px solid gray;
+  font-size: 14px;
+  border-radius: 3px;
+  padding: 5px;
+  color: rgb(52, 58, 64);
+}
