@@ -4,7 +4,9 @@ import { fetchRockets } from '../redux/rockets/rocketsSlice';
 import styles from '../styles/Navbar.module.css';
 
 function Rockets() {
-  const { rockets, isLoading, error } = useSelector((state) => state.rockets);
+  const {
+    rockets, isLoading, error,
+  } = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -12,11 +14,11 @@ function Rockets() {
   }, [dispatch]);
 
   return (
-    <main className={styles.rocketsMain}>
+    <ul className={styles.rocketsMain}>
       {isLoading && <p>Loading...</p>}
       {error && <p>{error}</p>}
       {rockets.map((rocket) => (
-        <article key={rocket.id}>
+        <li className={styles.Containerli} key={rocket.id}>
           <div className={styles.imgContainer}>
             <img
               src={rocket.flickr_images[0]}
@@ -24,15 +26,15 @@ function Rockets() {
               className={styles.rocketImg}
             />
           </div>
-          <main className={styles.articleMain}>
+          <div className={styles.mainRocket}>
             <h1 className={styles.rocketTitle}>{rocket.name}</h1>
-            <p className={styles.rocketDescription}>
+            <p>
               {rocket.description}
             </p>
-          </main>
-        </article>
+          </div>
+        </li>
       ))}
-    </main>
+    </ul>
   );
 }
 
