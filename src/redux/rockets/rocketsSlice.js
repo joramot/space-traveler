@@ -4,6 +4,7 @@ const initialState = {
   rockets: [],
   isLoading: false,
   error: '',
+  isLoaded: false,
 };
 
 export const fetchRockets = createAsyncThunk(
@@ -49,6 +50,7 @@ const rocketsSlice = createSlice({
       .addCase(fetchRockets.fulfilled, (state, action) => ({
         ...state,
         isLoading: false,
+        isLoaded: true,
         rockets: action.payload,
       }))
       .addCase(fetchRockets.rejected, (state, action) => ({
