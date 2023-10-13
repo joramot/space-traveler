@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchRockets, reserveRocket, reserveCanceled } from '../redux/rockets/rocketsSlice';
+import { fetchRockets, reserveRocket, cancelRockets } from '../redux/rockets/rocketsSlice';
 import styles from '../styles/Rockets.module.css';
 
 function Rockets() {
@@ -20,7 +20,7 @@ function Rockets() {
   };
 
   const handleCancelation = (id) => {
-    dispatch(reserveCanceled(id));
+    dispatch(cancelRockets(id));
   };
 
   return (
