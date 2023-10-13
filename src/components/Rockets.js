@@ -1,17 +1,23 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchRockets } from '../redux/rockets/rocketsSlice';
+import { fetchRockets, reserveRocket } from '../redux/rockets/rocketsSlice';
 import styles from '../styles/Navbar.module.css';
 
 function Rockets() {
   const {
-    rockets, isLoading, error,
+    rockets, isLoading, error, isLoaded,
   } = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchRockets());
-  }, [dispatch]);
+    if (!isLoaded) {
+      dispatch(fetchRockets());
+    }
+  }, [dispatch, isLoaded]);
+
+  const handleReserve = (id) => {
+    dispatch(reserveRocket(id));
+  };
 
   return (
     <ul className={styles.rocketsMain}>
@@ -31,6 +37,13 @@ function Rockets() {
             <p>
               {rocket.description}
             </p>
+            <button
+              onClick={() => handleReserve(rocket.id)}
+              className=""
+              type="button"
+            >
+              Reserve Rocket
+            </button>
           </div>
         </li>
       ))}
