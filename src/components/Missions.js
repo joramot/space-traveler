@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchMissions } from '../redux/missions/missionsSlice';
+import { fetchMissions, reserveMission } from '../redux/missions/missionsSlice';
 import styles from '../styles/Missions.module.css';
 
 function Missions() {
@@ -14,6 +14,10 @@ function Missions() {
       dispatch(fetchMissions());
     }
   }, [dispatch, isLoaded]);
+
+  const handleReserve = (id) => {
+    dispatch(reserveMission(id));
+  };
 
   return (
     <table>
@@ -50,7 +54,13 @@ function Missions() {
             </td>
             <td>
               <div className={styles.members}>
-                <button className={styles.joinmission} type="button">Join Mission</button>
+                <button
+                  className={styles.joinmission}
+                  type="button"
+                  onClick={() => handleReserve(mission.mission_id)}
+                >
+                  Join Mission
+                </button>
               </div>
             </td>
           </tr>
