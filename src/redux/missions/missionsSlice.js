@@ -13,7 +13,6 @@ export const fetchMissions = createAsyncThunk(
     try {
       const response = await fetch('https://api.spacexdata.com/v3/missions');
       const missions = await response.json();
-      console.log(missions);
       return missions;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -28,6 +27,17 @@ const missionsSlice = createSlice({
     reserveMission: (state, action) => {
       const mission = state.missions.find((r) => r.mission_id === action.payload);
       mission.reserved = !mission.reserved;
+    },
+    cancelMissions: (state, action) => {
+      const id = action.payload;
+      const newState = state.missions.map((mission) => {
+        if (mission.mission_id !== id) return mission;
+        return { ...mission, reserved: false };
+      });
+      return {
+        ...state,
+        missions: newState,
+      };
     },
   },
   extraReducers: (builder) => {
@@ -50,6 +60,6 @@ const missionsSlice = createSlice({
   },
 });
 
-export const { reserveMission } = missionsSlice.actions;
+export const { reserveMission, cancelMissions } = missionsSlice.actions;
 
 export default missionsSlice.reducer;

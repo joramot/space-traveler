@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchMissions, reserveMission } from '../redux/missions/missionsSlice';
+import { fetchMissions, reserveMission, cancelMissions } from '../redux/missions/missionsSlice';
 import styles from '../styles/Missions.module.css';
 
 function Missions() {
@@ -17,6 +17,10 @@ function Missions() {
 
   const handleReserve = (id) => {
     dispatch(reserveMission(id));
+  };
+
+  const handleCancelation = (id) => {
+    dispatch(cancelMissions(id));
   };
 
   return (
@@ -49,18 +53,32 @@ function Missions() {
             </td>
             <td>
               <div className={styles.members}>
-                <h2 className={styles.labelmembers}>NOT A MEMBER</h2>
+                <h2 className={`${styles.labelmembers} ${!mission.reserved && styles.labelmembersyes}`}> </h2>
               </div>
             </td>
             <td>
               <div className={styles.members}>
+
+                {!mission.reserved && (
                 <button
+                  onClick={() => handleReserve(mission.mission_id)}
                   className={styles.joinmission}
                   type="button"
-                  onClick={() => handleReserve(mission.mission_id)}
                 >
                   Join Mission
                 </button>
+                )}
+
+                {mission.reserved && (
+                <button
+                  onClick={() => handleCancelation(mission.mission_id)}
+                  className={styles.cancelButton}
+                  type="button"
+                >
+                  Leave Mission
+                </button>
+                )}
+
               </div>
             </td>
           </tr>
