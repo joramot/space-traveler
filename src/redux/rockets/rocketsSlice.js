@@ -13,7 +13,6 @@ export const fetchRockets = createAsyncThunk(
     try {
       const response = await fetch('https://api.spacexdata.com/v4/rockets');
       const rockets = await response.json();
-      console.log(rockets);
       return rockets;
     } catch (error) {
       return rejectWithValue(error.message);
