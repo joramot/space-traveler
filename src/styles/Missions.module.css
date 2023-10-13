@@ -59,12 +59,29 @@ td {
 }
 
 .labelmembers {
+  background-color: rgb(37, 162, 183);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.labelmembers::after {
+  content: 'Active Member';
+}
+
+.labelmembersyes {
   background-color: rgb(109, 117, 125);
   color: white;
   font-size: 14px;
   font-weight: 600;
   border-radius: 3px;
   padding: 5px;
+}
+
+.labelmembersyes::after {
+  content: 'NOT A MEMBER';
 }
 
 .joinmission {
@@ -74,4 +91,13 @@ td {
   border-radius: 3px;
   padding: 5px;
   color: rgb(52, 58, 64);
+}
+
+.cancelButton {
+  background-color: transparent;
+  border: 1px solid rgb(218, 56, 73);
+  font-size: 14px;
+  border-radius: 3px;
+  padding: 5px;
+  color: rgb(218, 56, 73);
 }
