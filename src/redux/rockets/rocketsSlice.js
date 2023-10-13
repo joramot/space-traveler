@@ -4,6 +4,7 @@ const initialState = {
   rockets: [],
   isLoading: false,
   error: '',
+  isLoaded: false,
 };
 
 export const fetchRockets = createAsyncThunk(
@@ -12,7 +13,6 @@ export const fetchRockets = createAsyncThunk(
     try {
       const response = await fetch('https://api.spacexdata.com/v4/rockets');
       const rockets = await response.json();
-      console.log(rockets);
       return rockets;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -28,6 +28,17 @@ const rocketsSlice = createSlice({
       const rocket = state.rockets.find((r) => r.id === action.payload);
       rocket.reserved = !rocket.reserved;
     },
+    cancelRockets: (state, action) => {
+      const id = action.payload;
+      const newState = state.rockets.map((rocket) => {
+        if (rocket.id !== id) return rocket;
+        return { ...rocket, reserved: false };
+      });
+      return {
+        ...state,
+        rockets: newState,
+      };
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -38,6 +49,7 @@ const rocketsSlice = createSlice({
       .addCase(fetchRockets.fulfilled, (state, action) => ({
         ...state,
         isLoading: false,
+        isLoaded: true,
         rockets: action.payload,
       }))
       .addCase(fetchRockets.rejected, (state, action) => ({
@@ -48,6 +60,6 @@ const rocketsSlice = createSlice({
   },
 });
 
-export const { reserveRocket } = rocketsSlice.actions;
+export const { reserveRocket, cancelRockets } = rocketsSlice.actions;
 
 export default rocketsSlice.reducer;
