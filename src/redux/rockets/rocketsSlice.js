@@ -13,7 +13,15 @@ export const fetchRockets = createAsyncThunk(
     try {
       const response = await fetch('https://api.spacexdata.com/v4/rockets');
       const rockets = await response.json();
-      return rockets;
+
+      const filteredRockets = rockets.slice(0, 4).map((rocket) => ({
+        id: rocket.id,
+        rocket_name: rocket.name,
+        description: rocket.description,
+        flickr_images: rocket.flickr_images,
+      }));
+
+      return filteredRockets;
     } catch (error) {
       return rejectWithValue(error.message);
     }

@@ -13,7 +13,14 @@ export const fetchMissions = createAsyncThunk(
     try {
       const response = await fetch('https://api.spacexdata.com/v3/missions');
       const missions = await response.json();
-      return missions;
+
+      const filteredMissions = missions.slice(0, 4).map((mission) => ({
+        mission_id: mission.mission_id,
+        mission_name: mission.mission_name,
+        description: mission.description,
+      }));
+
+      return filteredMissions;
     } catch (error) {
       return rejectWithValue(error.message);
     }
