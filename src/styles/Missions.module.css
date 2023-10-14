@@ -1,0 +1,103 @@
+table {
+  display: flex;
+  flex-direction: column;
+}
+
+tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border: 1px solid gray;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(242, 242, 242);
+}
+
+td {
+  border-left: 1px solid gray;
+}
+
+.missions {
+  width: 160px;
+  height: 30px;
+  margin: 0;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.description {
+  width: 750px;
+  height: 30px;
+  margin: 0;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.status {
+  width: 120px;
+  height: 30px;
+  margin: 0;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.description_p {
+  width: 750px;
+  margin: 0;
+  font-size: 20px;
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+.members {
+  width: 130px;
+  margin: 0;
+  font-size: 20px;
+  justify-content: center;
+  height: 100%;
+}
+
+.labelmembers {
+  background-color: rgb(37, 162, 183);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.labelmembers::after {
+  content: 'Active Member';
+}
+
+.labelmembersyes {
+  background-color: rgb(109, 117, 125);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.labelmembersyes::after {
+  content: 'NOT A MEMBER';
+}
+
+.joinmission {
+  background-color: transparent;
+  border: 1px solid gray;
+  font-size: 14px;
+  border-radius: 3px;
+  padding: 5px;
+  color: rgb(52, 58, 64);
+}
+
+.cancelButton {
+  background-color: transparent;
+  border: 1px solid rgb(218, 56, 73);
+  font-size: 14px;
+  border-radius: 3px;
+  padding: 5px;
+  color: rgb(218, 56, 73);
+}
