@@ -1,4 +1,81 @@
-# Getting Started with Create React App
+# welcome to ours project Space Traveler´s Hub
+
+<a name="readme-top"></a>
+
+<!-- TABLE OF CONTENTS -->
+
+# 📗 Table of Contents
+
+- [welcome to ours project Space Traveler´s Hub](#welcome-to-ours-project-space-travelers-hub)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Space Traveler´s Hub! ](#-space-travelers-hub-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [🚀 Live Demo  ... coming soon](#-live-demo---coming-soon)
+  - [💻 Getting Started ](#-getting-started-)
+  - [Available Scripts](#available-scripts)
+    - [`npm start`](#npm-start)
+    - [`npm test`](#npm-test)
+    - [`npm run build`](#npm-run-build)
+    - [`npm run eject`](#npm-run-eject)
+  - [Learn More](#learn-more)
+    - [Code Splitting](#code-splitting)
+    - [Analyzing the Bundle Size](#analyzing-the-bundle-size)
+    - [Making a Progressive Web App](#making-a-progressive-web-app)
+    - [Advanced Configuration](#advanced-configuration)
+    - [Deployment](#deployment)
+    - [`npm run build` fails to minify](#npm-run-build-fails-to-minify)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
+
+<!-- PROJECT DESCRIPTION -->
+
+# 📖 Space Traveler´s Hub! <a name="about-project"></a>
+
+**Space Traveler´s Hub** we were working with the real live data from the SpaceX API. we built a web application for a company that provides commercial and scientific space travel services. The application allow users to book rockets and join selected space missions.
+
+## 🛠 Built With <a name="built-with"></a>
+
+### Tech Stack <a name="tech-stack"></a>
+- Kanban board with GitHub project 
+- React
+- Redux
+- CSS
+- NodeJS
+- Jest
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://react.dev/">React</></li>
+    <li><a href="https://react-redux.js.org/">React Redux</a></li>
+    <li><a href="hhttps://jestjs.io/">Jest</a></li>
+  </ul>
+</details>
+
+### Key Features <a name="key-features"></a>
+
+- **The Rockets section displays a list of all available SpaceX rockets.**
+- **Users can book each rocket by clicking the reservation button or cancel the previously made booking**
+- **The Missions section displays a list of current missions along with their brief description and participation status**
+- **There is also a button next to each mission that allows users to join the selected mission or leave the mission the user joined earlier.**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"> ... coming soon</a>
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -68,3 +145,62 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Alejandro Maggioni**
+
+- GitHub: [@alex1779](https://github.com/alex1779)
+- LinkedIn: [@alex1779](in/alejandro-maggioni-086678b5)
+
+👤 **Jose RM**
+
+- GitHub: [@Joramot](https://github.com/joramot)
+- Twitter: [@El_rulis](https://twitter.com/el_rulis)
+- LinkedIn: [jose-RM](https://linkedin.com/in/jose-RM)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/joramot/space-traveler/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this Awesome Books project please share my portfolio with recruters!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FAQ (optional) -->
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
